@@ -1,0 +1,15 @@
+WELCOME
+-------
+This Project is about recommending the songs based on the user inputs(interest)
+
+The steps that should be followed to execute the code is ,
+1. Install Python (Give the path in environment variable!!)
+2. Open terminal and run "python test.py" .
+3. If you get error like ,
+    ImportError: No module named 'library_name'
+    Do pip install library_name
+    [check the command for installing the libraries]
+4. When the code is running, Open Browser and follow this link http://127.0.0.1:5000/ 
+5. Give the song name in search bar to get the similar song.
+6. For Emotion based recommendation system click the camera button.
+    It will capture the image with webcam and recommend songs.

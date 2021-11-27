@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <title>Document</title>
+    </head>
+
+
+        <body >
+        <div>
+            <div class="header" >
+                <ul><marquee>
+                    <h1>TUNE IN</h1>
+                        <p>Music of your choice</p></marquee>
+                    <li style="float:right">
+                        <form method="POST">
+                            <input type="text" name="song" id="song" placeholder="Search for music you love!" />
+                            <input type="submit" name="submit" value="Search" />
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="container row">
+                
+                <div class="pop column">
+                    <h2>Popular Playlist</h2>
+                    {% for song in songs %}
+                    <h6>{{ song }}</h6>
+                    {% endfor %}
+                </div>
+
+                
+                <div class="rec column">
+                    
+                    {% if(data) %}
+                    
+                    <b> <h2>Recommended Playlist (Cosine)</h2>
+                    <div style="overflow: auto; width: 300px; height: 400px; color:white">
+                    {% for song in data %}
+                    <h3>{{ song }}</h3>
+                    <br></b>
+                    {% endfor %}</div>
+
+                    {% endif %}
+                    {% if(sn) %}
+                    </div><div class="rec column">
+                    <h2>Recommended Playlist collaborative</h2>
+                    <div style="overflow: auto; width: 300px; height: 400px">
+                    {% for song in sn %}
+                    <h6>{{ song }}</h6>
+                    <br>
+                    {% endfor %}</div>
+
+                    {% endif %}</div>
+
+                
+                
+                
+            </div>
+        </div>
+            </div>
+            <br><br><br>
+                <form action="{{ url_for('emotion') }}"><button class="emotion" style="font-size:24px"><span class="fas fa-camera-retro"></span></button></form>
+
+            
+        
+    </body>
+
+</html>

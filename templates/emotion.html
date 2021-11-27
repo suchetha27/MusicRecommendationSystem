@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <title></title>
+  </head>
+  <body>
+
+	
+  <div>
+    <div class="header" >
+        <ul><marquee>
+            <li><h1>Tune IN</h1>
+                <p>Music of your choice</p></li></marquee>
+                <li style="float:right">
+                  <form action="#" method="post">
+                    <p><input type="text" name="nm" placeholder="Enter num of songs" /></p>
+                    <p><input type="submit" value="submit"/></p>
+                  </form></li>
+                </ul></div>
+  <div class="container row">
+    <div class="pop column">
+        <h2>Popular Playlist</h2>
+        {% for song in songs %}
+        <h6>{{ song }}</h6>
+        {% endfor %}
+    </div>
+    
+  <div class="rec column">
+  
+  {% if(emo) %}
+  <h2>Your emotion is {{emo}}</h2>
+  {% endif %}
+  {% if(data) %}
+  <h2>Recommended Playlist</h2>
+  <div style="overflow: auto; width: 300px; height: 400px">
+  {% for song in data %}
+  <h6>{{ song }}</h6><br>
+  {% endfor %}
+</div>
+  {% endif %}
+
+   </div>
+
+   
+  {% if(msg) %}
+  <p>{{msg}}</p>
+  {% endif %}
+</div>
+</div>
+  </body>
+</html>

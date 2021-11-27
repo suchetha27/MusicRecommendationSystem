@@ -1,0 +1,95 @@
+html,body {
+    background: linear-gradient(65deg, black, transparent), url('https://unsplash.com/photos/wVjd0eWNqI8') no-repeat center center fixed;
+    background-size: cover;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+.header {
+    font: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+li {
+    display: inline;
+    float: left;
+}
+h1,p {
+    color: red;
+}
+form {
+    padding-top: 25px;
+}
+input[type=text] {
+    width: 500px;
+    height: 50px;
+    border: white;
+    border-style: solid;
+    border-width: 3px;
+    background: transparent;
+    backface-visibility: visible;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    float: left;
+}
+input[type=submit] {
+    width: 80px;
+    height: 50px;
+    background-color: transparent;
+    backface-visibility: visible;
+    border-radius: 25px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+
+.row {
+    float: left;
+    margin-top: 15px;
+}
+
+.pop,.rec {
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: white;
+    background: transparent;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 1px;
+    color: wheat;
+}
+h2 {
+    border: solid;
+    border-color: tomato;
+    color: white;
+    border-width: 2px;
+    border-radius: 10px;
+    background: tomato;
+    width: 400px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+a {
+    padding-left: 15px;
+    float: right;
+    font-size: 50px;
+    margin-top: 500px;
+    margin-right: 50px;
+    border: solid;
+    border-width: 5px;
+    align-items: center;
+    border-radius: 50px;
+    border-color: tomato;
+  }
+a:hover {
+    background: tomato;
+}
